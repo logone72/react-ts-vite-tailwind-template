@@ -1,5 +1,57 @@
 # React + TypeScript + Vite + Tailwind + FSD
 
+## TODO
+
+- [ ] 폴더 구조
+  - [ ] fsd
+- [ ] style
+  - [ ] tailwind
+    - [ ] vscode tailwind intellisense
+- [x] language
+  - [x] ts
+- [x] bundler
+  - [x] vite
+    - [ ] rollup-plugin-visualizer
+    - [x] vite-tsconfig-paths
+    - [ ] @vitejs/plugin-legacy
+    - [ ] vite-plugin-checker
+- [ ] test
+  - [ ] vitest
+  - [ ] msw
+- [ ] core library
+  - [x] react
+  - [ ] react router
+  - [ ] state management
+    - [ ] zustand
+- [ ] library
+  - [ ] clsx
+  - [ ] dayJs
+- [ ] 프로젝트 설정 공유
+  - [x] nvm
+  - [ ] package.json
+- [ ] 코드 스타일
+  - [x] eslint
+    - [ ] eslint-plugin-import
+    - [ ] eslint-plugin-tailwindcss
+    - [ ] eslint-plugin-react
+    - [ ] eslint-plugin-react-hooks
+    - [ ] eslint-plugin-jsx-a11y
+  - [x] prettier
+    - [ ] tailwind-prettier-plugin
+  - [ ] lint-staged
+  - [ ] editiorConfig
+- [ ] verison manage
+  - [x] git
+  - [ ] conversional commit
+  - [ ] `husky` + `commitlint` + `.husky/commit-msg`
+- [ ] config
+  - [ ] ts path alias
+- [ ] deploy
+  - [ ] github pages
+    - [ ] on version tag commit
+
+## Structure
+
 - 폴더 구조
   - fsd
 - style
