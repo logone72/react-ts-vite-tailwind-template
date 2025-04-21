@@ -67,12 +67,48 @@ export default tseslint.config(
       'import-x/order': [
         'warn',
         {
+          groups: [
+            'builtin', // Built-in imports (come from NodeJS native) go first
+            'external', // External imports
+            'internal', // Absolute imports
+            'parent', // Relative imports
+            'sibling', // Relative imports
+            'index', // index imports
+            'object', // object imports
+            'unknown', // unknown
+            'type', // type imports
+          ],
+          pathGroups: [
+            {
+              pattern: '*.png',
+              group: 'unknown',
+              position: 'after',
+              patternOptions: { matchBase: true },
+            },
+            {
+              pattern: '*.jpg',
+              group: 'unknown',
+              position: 'after',
+              patternOptions: { matchBase: true },
+            },
+          ],
+          'newlines-between': 'always',
+          distinctGroup: true,
           alphabetize: {
             order: 'asc',
-            caseInsensitive: true,
+            caseInsensitive: true, // ignore case
           },
         },
       ],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'type-imports',
+          disallowTypeAnnotations: true,
+          fixStyle: 'inline-type-imports',
+        },
+      ],
+      '@typescript-eslint/no-import-type-side-effects': 'error',
     },
     settings: {
       react: {

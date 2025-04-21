@@ -1,4 +1,4 @@
 {
   "eslint.useFlatConfig": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": true
 }
