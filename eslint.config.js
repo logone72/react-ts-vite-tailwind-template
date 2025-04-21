@@ -109,6 +109,86 @@ export default tseslint.config(
         },
       ],
       '@typescript-eslint/no-import-type-side-effects': 'error',
+
+      /**
+       * typescript-eslint
+       */
+      // 클래스, 인터페이스, 타입 리터럴이 정렬되는 방식
+      '@typescript-eslint/member-ordering': [
+        'warn',
+        {
+          default: [
+            'public-static-field',
+            'private-static-field',
+            'public-instance-field',
+            'private-instance-field',
+            'public-constructor',
+            'private-constructor',
+            'public-instance-method',
+            'private-instance-method',
+          ],
+        },
+      ],
+      // 프로미스를 사용하는 경우 명시적으로 표기해야하는지 아닌지
+      '@typescript-eslint/no-floating-promises': 'warn',
+      // any 타입을 사용해도 되는지 안되는지
+      '@typescript-eslint/no-explicit-any': 'error',
+      // 네이밍 컨벤션
+      '@typescript-eslint/naming-convention': [
+        'warn',
+        {
+          format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+          selector: 'variable',
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'allow',
+        },
+        { format: ['camelCase', 'PascalCase'], selector: 'function' },
+        { format: ['PascalCase'], selector: 'interface' },
+        { format: ['PascalCase'], selector: 'typeAlias' },
+        { format: ['PascalCase'], selector: 'class' },
+      ],
+      // 줄바꿈 관련
+      'padding-line-between-statements': [
+        'warn',
+        // 블록 이후에 공백 추가 (함수나 클래스 등)
+        { blankLine: 'always', prev: 'block-like', next: '*' },
+        // 'use strict'와 같은 지시문 이후에 공백 추가
+        { blankLine: 'always', prev: 'directive', next: '*' },
+        // import 문 이후에 공백 추가
+        { blankLine: 'always', prev: 'import', next: '*' },
+        // import 문 끼리는 공백 자유
+        { blankLine: 'any', prev: 'import', next: 'import' },
+        // return 문 이전에 공백 추가
+        { blankLine: 'always', prev: '*', next: 'return' },
+        // 블록과 같은 구문 전후에 공백 추가
+        {
+          blankLine: 'always',
+          prev: [
+            'if',
+            'for',
+            'while',
+            'do',
+            'switch',
+            'try',
+            'function',
+            'class',
+          ],
+          next: '*',
+        },
+        {
+          blankLine: 'any',
+          prev: ['if', 'for', 'while', 'do', 'switch', 'try'],
+          next: ['if', 'for', 'while', 'do', 'switch', 'try'],
+        },
+        // 변수 선언 후에 공백 추가 (다른 선언문이 뒤따르지 않을 경우)
+        { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+        // 변수 선언 사이에 공백 자유
+        {
+          blankLine: 'any',
+          prev: ['const', 'let', 'var'],
+          next: ['const', 'let', 'var'],
+        },
+      ],
     },
     settings: {
       react: {
