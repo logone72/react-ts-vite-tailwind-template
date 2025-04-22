@@ -39,7 +39,7 @@
   - [x] prettier
     - [ ] tailwind-prettier-plugin
   - [ ] lint-staged
-  - [ ] editiorConfig
+  - [x] editiorConfig
 - [ ] verison manage
   - [x] git
   - [ ] conversional commit
