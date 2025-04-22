@@ -19,10 +19,16 @@ export default tseslint.config(
       eslint.configs.recommended,
       tseslint.configs.recommendedTypeChecked,
       tseslint.configs.stylisticTypeChecked,
+      /**
+       * @see https://www.npmjs.com/package/@eslint-react/eslint-plugin
+       */
       eslintReact.configs['recommended-typescript'],
-      reactDom.configs.recommended,
       eslintPluginImportX.flatConfigs.recommended,
       eslintPluginImportX.flatConfigs.typescript,
+      reactDom.configs.recommended,
+      reactRefresh.configs.vite,
+      jsxA11y.flatConfigs.recommended,
+      reactHooks.configs['recommended-latest'],
     ],
     languageOptions: {
       parser: tseslint.parser,
@@ -35,15 +41,7 @@ export default tseslint.config(
       sourceType: 'module',
       globals: { ...globals.serviceworker, ...globals.browser },
     },
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      'jsx-a11y': jsxA11y,
-    },
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-
       '@eslint-react/no-class-component': 'error',
       'react-refresh/only-export-components': [
         'warn',
