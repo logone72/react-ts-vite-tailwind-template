@@ -42,7 +42,7 @@
     - [ ] eslint-plugin-jsx-a11y
   - [x] prettier
     - [ ] tailwind-prettier-plugin
-  - [ ] lint-staged
+  - [x] lint-staged
   - [x] editiorConfig
 - [x] verison manage
   - [x] git
