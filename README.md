@@ -27,9 +27,9 @@
   - [ ] react router or tanstack router
   - [ ] state management
     - [ ] zustand
-- [ ] library
-  - [ ] clsx
-  - [ ] dayJs
+- [x] library
+  - [x] clsx
+  - [x] dayJs
 - [ ] 프로젝트 설정 공유
   - [x] nvm
   - [x] package.json
