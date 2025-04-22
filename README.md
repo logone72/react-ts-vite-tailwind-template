@@ -44,10 +44,10 @@
     - [ ] tailwind-prettier-plugin
   - [ ] lint-staged
   - [x] editiorConfig
-- [ ] verison manage
+- [x] verison manage
   - [x] git
-  - [ ] conversional commit
-  - [ ] `husky` + `commitlint` + `.husky/commit-msg`
+  - [x] conversional commit
+  - [x] `husky` + `commitlint` + `.husky/commit-msg`
 - [ ] config
   - [ ] ts path alias
 - [ ] deploy
