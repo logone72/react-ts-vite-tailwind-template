@@ -1,5 +1,9 @@
 # React + TypeScript + Vite + Tailwind + FSD
 
+## conventional-commit
+
+[요약](./docs/conventional-commit.md)
+
 ## TODO
 
 - [ ] 폴더 구조

@@ -12,7 +12,7 @@ import eslintReact from '@eslint-react/eslint-plugin';
 const TARGET_FILES = ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'];
 
 export default tseslint.config(
-  { ignores: ['dist', 'node_modules', 'eslint.config.js'] },
+  { ignores: ['dist', 'node_modules', '**/*.config.js'] },
   {
     files: TARGET_FILES,
     extends: [
