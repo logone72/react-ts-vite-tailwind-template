@@ -11,10 +11,10 @@
   - [x] ts
 - [x] bundler
   - [x] vite
-    - [ ] rollup-plugin-visualizer
+    - [x] rollup-plugin-visualizer
     - [x] vite-tsconfig-paths
     - [ ] @vitejs/plugin-legacy
-    - [ ] vite-plugin-checker
+    - [x] vite-plugin-checker
 - [ ] test
   - [ ] vitest
   - [ ] msw
