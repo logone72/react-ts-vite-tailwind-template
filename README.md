@@ -24,7 +24,7 @@
   - [ ] msw
 - [ ] core library
   - [x] react
-  - [ ] react router
+  - [ ] react router or tanstack router
   - [ ] state management
     - [ ] zustand
 - [ ] library
@@ -32,14 +32,14 @@
   - [ ] dayJs
 - [ ] 프로젝트 설정 공유
   - [x] nvm
-  - [ ] package.json
+  - [x] package.json
 - [ ] 코드 스타일
   - [x] eslint
-    - [ ] eslint-plugin-import
+    - [x] eslint-plugin-import
     - [ ] eslint-plugin-tailwindcss
-    - [ ] eslint-plugin-react
-    - [ ] eslint-plugin-react-hooks
-    - [ ] eslint-plugin-jsx-a11y
+    - [x] eslint-plugin-react
+    - [x] eslint-plugin-react-hooks
+    - [x] eslint-plugin-jsx-a11y
   - [x] prettier
     - [ ] tailwind-prettier-plugin
   - [x] lint-staged
@@ -48,8 +48,8 @@
   - [x] git
   - [x] conversional commit
   - [x] `husky` + `commitlint` + `.husky/commit-msg`
-- [ ] config
-  - [ ] ts path alias
+- [x] config
+  - [x] ts path alias
 - [ ] deploy
   - [ ] github pages
     - [ ] on version tag commit
