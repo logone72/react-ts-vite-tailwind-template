@@ -41,6 +41,11 @@ export default tseslint.config(
       sourceType: 'module',
       globals: { ...globals.serviceworker, ...globals.browser },
     },
+    settings: {
+      'import/resolver': {
+        typescript: true,
+      },
+    },
     rules: {
       '@eslint-react/no-class-component': 'error',
       'react-refresh/only-export-components': [

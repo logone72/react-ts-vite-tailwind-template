@@ -1,4 +1,4 @@
-import Home from '../pages/home/ui/Layout';
+import Home from '@/pages/home/ui/Layout';
 
 function App() {
   return (
