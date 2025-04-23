@@ -1,5 +1,21 @@
 {
   "eslint.useFlatConfig": true,
   "editor.formatOnSave": true,
-  "cSpell.words": ["treemap"]
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.editor.customLabels.patterns": {
+    "**/index.{ts,tsx,js,jsx}": "${dirname}/index.${extname}"
+  },
+  "cSpell.words": ["treemap"],
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.folders.associations": {
+    "[A-Z]**": "React-components",
+    "queries": "Windows",
+    "query": "Windows",
+    "feature": "Packages",
+    "features": "Packages",
+    "entity": "Base",
+    "entities": "Base"
+  }
 }
