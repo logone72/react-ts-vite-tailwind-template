@@ -1,0 +1,29 @@
+# Ignore artifacts:
+dist/
+build/
+coverage/
+node_modules/
+
+# IDE / Editor folders
+.vscode/
+.idea/
+.husky/
+
+# Misc
+*.log
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# Documentation & metadata
+*.md
+*.json
+*.yml
+*.yaml
+
+# System files
+.DS_Store
+Thumbs.db
