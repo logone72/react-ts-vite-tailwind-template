@@ -45,6 +45,9 @@ export default tseslint.config(
       'import/resolver': {
         typescript: true,
       },
+      react: {
+        version: 'detect',
+      },
     },
     rules: {
       '@eslint-react/no-class-component': 'error',
@@ -192,11 +195,6 @@ export default tseslint.config(
           next: ['const', 'let', 'var'],
         },
       ],
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
     },
   }
 );
