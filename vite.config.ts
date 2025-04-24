@@ -6,11 +6,15 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vite.dev/config/
 export default defineConfig({
+  /**
+   * @description GitHub Pages 배포시 기본 경로 repo 명으로 설정
+   * @example '/repo-name/'
+   */
+  base: '/',
   plugins: [
     react(),
     tsconfigPaths(),
     checker({
-      // e.g. use TypeScript check
       typescript: true,
     }),
     visualizer({
