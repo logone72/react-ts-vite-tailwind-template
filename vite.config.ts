@@ -1,8 +1,11 @@
+import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import { checker } from 'vite-plugin-checker';
 import tsconfigPaths from 'vite-tsconfig-paths';
+
+import TanstackRouterConfig from './tsr.config.json';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -13,6 +16,13 @@ export default defineConfig({
    */
   base: '/react-ts-vite-tailwind-template/',
   plugins: [
+    TanStackRouterVite({
+      target: 'react',
+      autoCodeSplitting: true,
+      routesDirectory: TanstackRouterConfig.routesDirectory,
+      generatedRouteTree: TanstackRouterConfig.generatedRouteTree,
+      routeFileIgnorePrefix: TanstackRouterConfig.routeFileIgnorePrefix,
+    }),
     react(),
     tsconfigPaths(),
     checker({

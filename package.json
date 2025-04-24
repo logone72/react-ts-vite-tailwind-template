@@ -19,9 +19,13 @@
     "preview": "vite preview",
     "prepare": "husky",
     "test": "echo 'TODO: test'",
-    "deploy-to-gh-pages": "npm run build && gh-pages -d dist --nojekyll"
+    "deploy-to-gh-pages": "npm run build && gh-pages -d dist --nojekyll",
+    "generate-tsr": "tsr generate",
+    "watch-tsr": "tsr watch"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.117.0",
+    "@tanstack/react-router-devtools": "^1.117.0",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "react": "^19.1.0",
@@ -32,6 +36,8 @@
     "@commitlint/config-conventional": "^19.8.0",
     "@eslint-react/eslint-plugin": "^1.48.5",
     "@eslint/js": "^9.25.1",
+    "@tanstack/router-cli": "^1.117.0",
+    "@tanstack/router-plugin": "^1.117.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
