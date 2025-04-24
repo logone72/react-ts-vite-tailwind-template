@@ -30,7 +30,7 @@
 - [x] library
   - [x] clsx
   - [x] dayJs
-- [ ] 프로젝트 설정 공유
+- [x] 프로젝트 설정 공유
   - [x] nvm
   - [x] package.json
 - [ ] 코드 스타일
@@ -50,9 +50,8 @@
   - [x] `husky` + `commitlint` + `.husky/commit-msg`
 - [x] config
   - [x] ts path alias
-- [ ] deploy
-  - [ ] github pages
-    - [ ] on version tag commit
+- [x] deploy
+  - [x] github pages
 
 ## Structure
 
@@ -102,4 +101,3 @@
   - ts path alias
 - deploy
   - github pages
-    - on version tag commit
