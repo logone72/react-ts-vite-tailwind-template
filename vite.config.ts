@@ -16,6 +16,10 @@ export default defineConfig({
     tsconfigPaths(),
     checker({
       typescript: true,
+      eslint: {
+        useFlatConfig: true,
+        lintCommand: 'eslint ./src --ext .ts,.tsx',
+      },
     }),
     visualizer({
       open: false,

@@ -64,7 +64,6 @@ export default tseslint.config(
       'import-x/newline-after-import': 'warn',
       'import-x/no-dynamic-require': 'warn',
       'import-x/no-nodejs-modules': 'warn',
-      'import-x/exports-last': 'error',
       'import-x/first': 'error',
       'import-x/no-unresolved': [
         2,
@@ -86,16 +85,15 @@ export default tseslint.config(
           ],
           pathGroups: [
             {
-              pattern: '*.png',
+              pattern: '*.{png,jpg,jpeg,gif,webp,svg,ico,bmp,tiff,avif}',
               group: 'unknown',
               position: 'after',
               patternOptions: { matchBase: true },
             },
             {
-              pattern: '*.jpg',
-              group: 'unknown',
+              pattern: '{@*/*,@*}',
+              group: 'external',
               position: 'after',
-              patternOptions: { matchBase: true },
             },
           ],
           'newlines-between': 'always',
