@@ -1,0 +1,47 @@
+
+## TODO
+
+- [ ] 폴더 구조
+  - [ ] fsd
+- [ ] style
+  - [ ] tailwind
+    - [ ] vscode tailwind intellisense
+- [x] language
+  - [x] ts
+- [x] bundler
+  - [x] vite
+    - [x] rollup-plugin-visualizer
+    - [x] vite-tsconfig-paths
+    - [ ] @vitejs/plugin-legacy
+    - [x] vite-plugin-checker
+- [ ] test
+  - [ ] vitest
+  - [ ] msw
+- [ ] core library
+  - [x] react
+  - [x] react router or tanstack router
+- [x] library
+  - [x] clsx
+  - [x] dayJs
+- [x] 프로젝트 설정 공유
+  - [x] nvm
+  - [x] package.json
+- [ ] 코드 스타일
+  - [x] eslint
+    - [x] eslint-plugin-import
+    - [ ] eslint-plugin-tailwindcss
+    - [x] eslint-plugin-react
+    - [x] eslint-plugin-react-hooks
+    - [x] eslint-plugin-jsx-a11y
+  - [x] prettier
+    - [ ] tailwind-prettier-plugin
+  - [x] lint-staged
+  - [x] editiorConfig
+- [x] verison manage
+  - [x] git
+  - [x] conversional commit
+  - [x] `husky` + `commitlint` + `.husky/commit-msg`
+- [x] config
+  - [x] ts path alias
+- [x] deploy
+  - [x] github pages
