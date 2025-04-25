@@ -64,6 +64,30 @@ if [ ${#FAILED_BRANCHES[@]} -gt 0 ]; then
     done
 fi
 
+# Ask if user wants to push successful branches
 echo ""
-echo -e "\033[36m---------------------------\033[0m"
-echo -e "\033[34m[INFO]\033[0m Returned to branch: $CURRENT_BRANCH"
+echo -e "\033[34m[INFO]\033[0m Do you want to push successful branches to origin? (y/n)"
+read -r PUSH_CONFIRM
+
+if [[ "$PUSH_CONFIRM" =~ ^[Yy]$ ]]; then
+    echo ""
+    echo -e "\033[34m[INFO]\033[0m Pushing successful branches to origin..."
+    echo ""
+
+    for BRANCH in "${SUCCESSFUL_BRANCHES[@]}"; do
+        echo -e "\033[34m[INFO]\033[0m Pushing $BRANCH to origin..."
+        git checkout "$BRANCH" >/dev/null 2>&1
+        if git push origin "$BRANCH" --force-with-lease; then
+            echo -e "\033[32m[OK]\033[0m Push success: $BRANCH"
+        else
+            echo -e "\033[31m[ERROR]\033[0m Push failed: $BRANCH"
+        fi
+        echo ""
+    done
+
+    # Return to original branch again
+    git checkout "$CURRENT_BRANCH" >/dev/null 2>&1
+    echo -e "\033[34m[INFO]\033[0m Returned to branch: $CURRENT_BRANCH"
+else
+    echo -e "\033[34m[INFO]\033[0m Skipping push to origin."
+fi
