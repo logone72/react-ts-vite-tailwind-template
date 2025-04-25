@@ -12,6 +12,7 @@
     "node": ">=20"
   },
   "scripts": {
+    "rebase-all": "chmod +x bin/rebase-all.sh && bin/rebase-all.sh",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint ./src --ext .ts,.tsx",
