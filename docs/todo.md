@@ -1,8 +1,14 @@
 
 ## TODO
 
-- [ ] 폴더 구조
-  - [ ] fsd
+- [ ] tailwind css
+- [ ] testing env
+- [ ] Readme 정리
+
+### 세부
+
+- [x] 폴더 구조
+  - [x] fsd
 - [ ] style
   - [ ] tailwind
     - [ ] vscode tailwind intellisense
