@@ -17,5 +17,6 @@
     "features": "Packages",
     "entity": "Base",
     "entities": "Base"
-  }
+  },
+  "css.validate": false,
 }

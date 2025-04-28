@@ -8,6 +8,7 @@ import reactDom from 'eslint-plugin-react-dom';
 import tseslint from 'typescript-eslint';
 import eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintReact from '@eslint-react/eslint-plugin';
+import tailwind from 'eslint-plugin-tailwindcss';
 
 const TARGET_FILES = ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'];
 
@@ -29,6 +30,7 @@ export default tseslint.config(
       reactRefresh.configs.vite,
       jsxA11y.flatConfigs.recommended,
       reactHooks.configs['recommended-latest'],
+      ...tailwind.configs['flat/recommended'],
     ],
     languageOptions: {
       parser: tseslint.parser,

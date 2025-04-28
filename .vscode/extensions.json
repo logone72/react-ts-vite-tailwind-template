@@ -27,5 +27,6 @@
     "streetsidesoftware.code-spell-checker",
     "vincaslt.highlight-matching-tag",
     "yoavbls.pretty-ts-errors",
+    "bradlc.vscode-tailwindcss"
   ]
 }
