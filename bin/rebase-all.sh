@@ -64,30 +64,59 @@ if [ ${#FAILED_BRANCHES[@]} -gt 0 ]; then
     done
 fi
 
-# Ask if user wants to push successful branches
+# New array for branches that actually changed
+CHANGED_BRANCHES=()
+
+for BRANCH in "${SUCCESSFUL_BRANCHES[@]}"; do
+    git checkout "$BRANCH" >/dev/null 2>&1
+
+    # Check if there are differences between local branch and remote
+    if ! git diff --quiet "$BRANCH" "origin/$BRANCH"; then
+        CHANGED_BRANCHES+=("$BRANCH")
+    fi
+done
+
+# Return to original branch
+git checkout "$CURRENT_BRANCH" >/dev/null 2>&1
+
+# If no changed branches, just skip and exit
+if [ ${#CHANGED_BRANCHES[@]} -eq 0 ]; then
+    echo ""
+    echo -e "\033[34m[INFO]\033[0m No branches changed after rebase. Nothing to push."
+    exit 0
+fi
+
+# If there are changed branches, ask
 echo ""
-echo -e "\033[34m[INFO]\033[0m Do you want to push successful branches to origin? (y/n)"
+echo -e "\033[34m[INFO]\033[0m The following branches have actual changes after rebase:"
+for B in "${CHANGED_BRANCHES[@]}"; do
+    echo " - $B"
+done
+echo ""
+echo -e "\033[34m[INFO]\033[0m Do you want to push these branches to origin? (y/n)"
 read -r PUSH_CONFIRM
 
-if [[ "$PUSH_CONFIRM" =~ ^[Yy]$ ]]; then
-    echo ""
-    echo -e "\033[34m[INFO]\033[0m Pushing successful branches to origin..."
-    echo ""
-
-    for BRANCH in "${SUCCESSFUL_BRANCHES[@]}"; do
-        echo -e "\033[34m[INFO]\033[0m Pushing $BRANCH to origin..."
-        git checkout "$BRANCH" >/dev/null 2>&1
-        if git push origin "$BRANCH" --force-with-lease; then
-            echo -e "\033[32m[OK]\033[0m Push success: $BRANCH"
-        else
-            echo -e "\033[31m[ERROR]\033[0m Push failed: $BRANCH"
-        fi
-        echo ""
-    done
-
-    # Return to original branch again
-    git checkout "$CURRENT_BRANCH" >/dev/null 2>&1
-    echo -e "\033[34m[INFO]\033[0m Returned to branch: $CURRENT_BRANCH"
-else
-    echo -e "\033[34m[INFO]\033[0m Skipping push to origin."
+if [[ ! "$PUSH_CONFIRM" =~ ^[Yy]$ ]]; then
+    echo -e "\033[34m[INFO]\033[0m Skipping push. Exiting."
+    exit 0
 fi
+
+# Proceed with push
+echo ""
+echo -e "\033[34m[INFO]\033[0m Pushing changed branches to origin..."
+echo ""
+
+for BRANCH in "${CHANGED_BRANCHES[@]}"; do
+    echo -e "\033[34m[INFO]\033[0m Pushing $BRANCH to origin..."
+    git checkout "$BRANCH" >/dev/null 2>&1
+    if git push origin "$BRANCH" --force-with-lease; then
+        echo -e "\033[32m[OK]\033[0m Push success: $BRANCH"
+    else
+        echo -e "\033[31m[ERROR]\033[0m Push failed: $BRANCH"
+    fi
+    echo ""
+done
+
+# Final checkout back to the original branch
+git checkout "$CURRENT_BRANCH" >/dev/null 2>&1
+echo -e "\033[34m[INFO]\033[0m Returned to branch: $CURRENT_BRANCH"
