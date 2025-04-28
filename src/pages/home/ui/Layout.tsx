@@ -7,10 +7,10 @@ function Layout() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className="flex h-full flex-col items-center justify-center p-4">
       <div className="flex flex-row items-center justify-center gap-12">
         <a
-          className="size-1/3 max-h-60 max-w-60"
+          className="size-40 max-w-[40%]"
           href="https://vite.dev"
           target="_blank"
           rel="noreferrer"
@@ -22,7 +22,7 @@ function Layout() {
           />
         </a>
         <a
-          className="size-1/3 max-h-60 max-w-60"
+          className="size-40 max-w-[40%]"
           href="https://react.dev"
           target="_blank"
           rel="noreferrer"
@@ -35,7 +35,7 @@ function Layout() {
         </a>
       </div>
       <h1 className="mt-6 text-5xl text-gray-800">Vite + React</h1>
-      <div className="p-8">
+      <div className="flex flex-col items-center justify-center gap-4 p-8">
         <button
           type="button"
           onClick={() => setCount(count => count + 1)}
@@ -56,7 +56,7 @@ function Layout() {
           <input type="text" className="mt-1 block w-full" />
         </label>
       </form>
-    </>
+    </div>
   );
 }
 
