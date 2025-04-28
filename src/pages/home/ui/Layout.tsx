@@ -50,6 +50,12 @@ function Layout() {
       <p className="text-gray-400">
         Click on the Vite and React logos to learn more
       </p>
+      <form>
+        <label className="mt-4 block">
+          <span className="text-gray-700">이름 (@tailwindcss/forms 예시)</span>
+          <input type="text" className="mt-1 block w-full" />
+        </label>
+      </form>
     </>
   );
 }
