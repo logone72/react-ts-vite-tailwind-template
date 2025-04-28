@@ -9,9 +9,19 @@ lerna-debug.log*
 stats.html
 build-stats.html
 
+# Dependency directories
 node_modules
+jspm_packages/
+bower_components/
+
+# Build outputs
 dist
 dist-ssr
+build/
+out/
+.next/
+.nuxt/
+.cache/
 *.local
 
 # Editor directories and files
@@ -25,4 +35,27 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.history/
+*.sublime-*
 
+# Testing
+coverage
+.nyc_output
+.jest-cache
+
+# Misc
+.tmp/
+.temp/
+.cache/
+.eslintcache
+.stylelintcache
+.turbo
+.vercel
+.netlify
+.parcel-cache
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
