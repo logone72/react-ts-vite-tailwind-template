@@ -8,5 +8,7 @@
   "arrowParens": "avoid",
   "endOfLine": "lf",
   "bracketSameLine": false,
-  "useTabs": false
+  "useTabs": false,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["clsx"]
 }

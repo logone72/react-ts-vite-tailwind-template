@@ -18,6 +18,7 @@
     "entity": "Base",
     "entities": "Base"
   },
+  "css.validate": false,
   "files.readonlyInclude": {
     "**/routeTree.gen.ts": true
   },
