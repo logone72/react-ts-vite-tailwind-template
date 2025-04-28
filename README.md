@@ -12,6 +12,7 @@ React SPA 프로젝트를 위한 탬플릿 레포지토리 입니다.
 - `main` 
   - 모든 설정이 합쳐진 최종 브랜치입니다. 가장 풍부한 설정이 포함되어있습니다.
     - React + TypeScript + Vite + Tailwind + FSD + Vitest + Tanstack Router
+    - 이 브랜치에서만 package-lock.json을 관리합니다.
 
 ### Other Branch List
 
