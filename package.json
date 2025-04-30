@@ -19,7 +19,7 @@
     "preview": "vite preview",
     "prepare": "husky",
     "test": "echo 'TODO: test'",
-    "deploy-to-gh-pages": "npm run build && gh-pages -d dist"
+    "deploy-to-gh-pages": "npm run build && gh-pages -d dist --nojekyll"
   },
   "dependencies": {
     "clsx": "^2.1.1",
