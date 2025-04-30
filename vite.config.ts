@@ -7,10 +7,11 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vite.dev/config/
 export default defineConfig({
   /**
-   * @description GitHub Pages 배포시 기본 경로 repo 명으로 설정
+   * @description GitHub Pages 배포시 기본 경로를 repo 명으로 설정
    * @example '/repo-name/'
+   * @default '/'
    */
-  base: '/',
+  base: '/react-ts-vite-tailwind-template/',
   plugins: [
     react(),
     tsconfigPaths(),
