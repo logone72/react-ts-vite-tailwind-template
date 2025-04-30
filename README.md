@@ -1,6 +1,6 @@
 # React + TypeScript + Vite + Tailwind + FSD
 
-React SPA 프로젝트를 위한 탬플릿 레포지토리 입니다.
+React SPA 프로젝트를 위한 템플릿 레포지토리 입니다.
 
 [링크](https://logone72.github.io/react-ts-vite-tailwind-template/)에서 Github Pages에 배포된 예시를 확인 할 수 있습니다.
 
@@ -31,7 +31,7 @@ basic 에서 목적한 설정만 추가된 브랜치들 입니다.
 
 ### Node.js
 
-Node.js 버젼은 20 이상을 기준으로 작업했습니다.
+Node.js 버전은 20 이상을 기준으로 작업했습니다.
 
 ### Bundler
 
